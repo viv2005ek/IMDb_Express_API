@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IMDb</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/logo.png">
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
+        <div class="container-fluid bg-dark p-2 fixed-top">
+            <a class="navbar-brand" href="#"><img class=" image-fluid ms-2" src="./images/logo.png" alt="" height="30px"></a>
+            <button class="navbar-toggler  text-white  " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon  text-white  togglerIconCss" ><i class="bi bi-list"></i></span>
+          </button>
+            <div class="collapse navbar-collapse fs-5 " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item ms-2 mt-2">
+                        <a class="nav-link active fw-bold text-white " aria-current="page" href="#contentWhole">Home</a>
+                    </li>
+                    <li class="nav-item mt-2">
+                        <button type="button" class="btn btn-outline-warning fw-bold border-0 fs-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Pro</button>
+
+                    </li>
+                    <li class="nav-item dropdown fw-bold ms-2 mt-2 ">
+                        <a class="nav-link dropdown-toggle text-white fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </a>
+                        <ul class="dropdown-menu bg-dark " id="dropDownListNav">
+                            <li><a class=" dropdown-item  fw-bold text-white " href="#topSearches">Movies</a></li>
+                            <li><a class="dropdown-item  fw-bold text-white" href="#loadingCards">Recommendation</a></li>
+                            <li>
+                                <hr class="dropdown-divider  fw-bold text-white">
+                            </li>
+                            <li><a class="dropdown-item  fw-bold text-white" href="#history">History</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <form class="d-flex mb-2 mt-2 " role="search ">
+                    <input class="form-control me-2 " type="search " placeholder="Search on IMDb " aria-label="Search " id="searchMovie" onkeypress="searchingMovieEnter(event)">
+                    <button type="button" class="btn btn-outline-secondary text-white fw-bold fs-5" onclick="searchingMovie()"><i class="bi bi-search" ></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid " id="contentWhole">
+        <div class="row d-flex align-items-center">
+            <div class="col-xl-9 mt-xl-5 mt-md-3 mt-2 ">
+                <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./images/poster1.jpeg" class="d-block w-100 rounded" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h1>1917</h1>
+                                <h3> die as a Warrior is Better than live as a Looser </h3>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/poster2.jpeg" class="d-block w-100 rounded" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h1>No Country For Old Men</h1>
+                                <h3>wakeUp ! Accept Your Defeat </h3>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/poster3.jpeg" class="d-block w-100  rounded" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h1>Open Cube Project</h1>
+                                <h3>Open Your Eyes and Face the Death </h3>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/poster4.jpeg" class="d-block w-100 rounded" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h1>Indiana Jones</h1>
+                                <h3> Last Gold of Treasure </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+                </div>
+            </div>
+            <div class="col-xl-3 col-12 d-block d-sm-flex d-xl-block justify-content-around mt-xl-5 mt-md-3 mt-2" id="loadingCards">
+                <div class="card mt-2" aria-hidden="true" id="card1Loading">
+                    <img src=" ./images/download.svg " class="card-img-top image-fluid" alt="... " id="card1LoadingImg">
+                    <div class="card-body ">
+                        <h5 class="card-title placeholder-glow" id="card1LoadingTitle">
+                            <span class="placeholder col-6 "></span>
+                        </h5>
+                        <p class="card-text placeholder-glow " id="card1LoadingText">
+                            <span class="placeholder col-7 "></span>
+                            <span class="placeholder col-4 "></span>
+                            <span class="placeholder col-4 "></span>
+                            <span class="placeholder col-6 "></span>
+                            <span class="placeholder col-8 "></span>
+                        </p>
+                        <a class="btn btn-primary disabled placeholder col-6 " aria-disabled="true " id="card1LoadingButton"></a>
+                    </div>
+                </div>
+                <div class="card mt-2 " aria-hidden="true " id="card2Loading ">
+                    <img src="./images/download.svg " class="card-img-top" alt="... " id="card2LoadingImg">
+                    <div class="card-body ">
+                        <h5 class="card-title placeholder-glow " id="card2LoadingTitle">
+                            <span class="placeholder col-6 "></span>
+                        </h5>
+                        <p class="card-text placeholder-glow " id="card2LoadingText">
+                            <span class="placeholder col-7 "></span>
+                            <span class="placeholder col-4 "></span>
+                            <span class="placeholder col-4 "></span>
+                            <span class="placeholder col-6 "></span>
+                            <span class="placeholder col-8 "></span>
+                        </p>
+                        <a class="btn btn-primary disabled placeholder col-6 " aria-disabled="true " id="card2LoadingButton"></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <h1 class="col-xl-9 mt-5 ps-4  " id="topSearches">Top Searches <i class="bi bi-search"></i></h1>
+            <div class="row " id="contentCards">
+                <div class="col">
+                    <div class="card mt-3" style="width: 18rem;">
+                        <img src="https://m.media-amazon.com/images/M/MV5BYTJmMDM4YWItMGM2YS00MzQ0LTliM2ItZDE1NzVlMjNjNDVlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_QL75_UY207_CR13,0,140,207_.jpg" class="card-img-top" alt="..." loading="lazy">
+                        <div class="card-body">
+                            <h5 class="card-title">Hitman</h5>
+                            <p class="card-text">Action</p>
+                            <a href="/Hitman" class="btn btn-primary">View More <i class="bi bi-box-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card  mt-3" style="width: 18rem;">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMDM5ODBiN2ItOTk4Yi00NzgyLWE2YTktYzhjYTc2ODE4ZTE4XkEyXkFqcGc@._V1_QL75_UX140_CR0,0,140,207_.jpg" loading="lazy" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Under Paris</h5>
+                            <p class="card-text">Horror</p>
+                            <a href="/Under Paris" class="btn btn-primary">View More <i class="bi bi-box-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mt-3" style="width: 18rem;">
+                        <img src="https://m.media-amazon.com/images/M/MV5BOTI5MjNjMTMtN2NiNC00YjBlLTgzMWQtMGRhZDZkYmY1NGU2XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_QL75_UX140_CR0,0,140,207_.jpg" loading=lazy class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Godzilla Minus One</h5>
+                            <p class="card-text">Adventure</p>
+                            <a href="/Godzilla" class="btn btn-primary">View More <i class="bi bi-box-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mt-3" style="width: 18rem;">
+                        <img src="https://m.media-amazon.com/images/M/MV5BN2EwM2I5OWMtMGQyMi00Zjg1LWJkNTctZTdjYTA4OGUwZjMyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_QL75_UX140_CR0,0,140,207_.jpg" loading="lazy" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">MAD MAX</h5>
+                            <p class="card-text">Thriller</p>
+                            <a href="/MAD" class="btn btn-primary">View More <i class="bi bi-box-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+        <h1 class="m-4" id="history">Your Searches <i class="bi bi-hourglass-split"></i></h1>
+        <div class="yourSearches d-flex flex-row flex-wrap p-4 row-gap-6" style="min-height: 200px;" id="historySearch"></div>
+
+
+        <!-- footer -->
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card text-center">
+                    <div class="card-header fw-bold">
+                        IMDb
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Thanks for Visiting</h5>
+                        <p class="card-text">IMDb "Phle Vishwas kre phir Istemaal kre"</p>
+                        <a href="#" class="btn btn-primary">Follow Us <i class="bi bi-box-arrow-up-right"></i></a>
+                    </div>
+                    <div class="card-footer text-body-secondary">
+                        ©IMDb
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+    <!-- modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- logIn form -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Keep Me Signed In</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Log In <i class="bi bi-box-arrow-in-right"></i></button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz " crossorigin="anonymous "></script>
+    <script src="script.js"></script>
+    <script src="api.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#dropDownListNav li a:hover {
+    color: black !important;
+}
+
+.togglerIconCss {
+    color: white !important;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    top: 5px;
+}
+
+#card1LoadingImg {
+    max-width: 500px;
+    aspect-ratio: 2 !important;
+}
+
+#card2LoadingImg {
+    max-width: 500px;
+    aspect-ratio: 2 !important;
+}
+
+#contentCards {
+    display: flex;
+    justify-content: space-around;
+}
+
+#contentCards {
+    padding-left: 5vw;
+}
+
+#contentWhole {
+    margin-top: 65px;
+}
+
+@media (max-width:1327px) {
+    #contentCards {
+        padding-left: 8vw;
+    }
+}
+
+@media (min-width:1200px) {
+    #contentWhole {
+        margin-top: 35px;
+    }
+}
+
+@media (max-width:1053px) {
+    #contentCards {
+        padding-left: 10vw;
+    }
+}
+
+@media (max-width:992px) {
+    #contentWhole {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width:768px) {
+    #contentWhole {
+        margin-top: 55px;
+    }
+}
+
+@media (max-width:707px) {
+    #contentCards {
+        padding-left: 25vw;
+    }
+}
+
+@media (max-width:500px) {
+    #contentCards {
+        padding-left: 15vw;
+    }
+}
+
+@media (max-width:400px) {
+    #contentCards {
+        padding-left: 10vw;
+    }
+}
+
+@media (max-width:350px) {
+    #contentCards {
+        padding-left: 5vw;
+    }
+}
+
+@media (max-width:320px) {
+    #contentCards {
+        padding-left: 3vw;
+    }
+}
+
+@media (max-width:576px) {
+    #loadingCards .card {
+        max-width: 500px;
+    }
+}
