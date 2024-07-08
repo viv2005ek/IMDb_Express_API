@@ -2,7 +2,8 @@ Use localhost:3000
 
 git clone ....
 <br>
-then npm install <packages mentioned in .json>
+move to directory
 <br>
-
-move to directory and node express.js
+then npm install <packages mentioned in .json
+<br>
+ and node express.js
